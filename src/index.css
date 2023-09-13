@@ -1,13 +1,87 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  height: 100vh;
+  background: rgb(21, 62, 144);
+  background: linear-gradient(120deg,
+      rgba(21, 62, 144, 1) 50%,
+      rgba(135, 170, 235, 1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 85px;
+  color: #fffaa4;
+  animation: flip-title 2s;
+}
+
+.container-input {
+  background-color: rgba(255, 250, 164, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  margin: 25px 0;
+}
+
+.container-input:hover {
+  box-shadow: rgba(135, 170, 235, 0.5) 0px 3px 8px;
+}
+
+.container-input input {
+  background-color: transparent;
+  border: 0;
+  font-size: 20px;
+  color: #fffaa4;
+  margin-right: 8px;
+  outline: none;
+}
+
+.container-input input::placeholder {
+  color: #fffaa4;
+}
+
+.btn-search {
+  background-color: transparent;
+  border: 0;
+  color: #fffaa4;
+  font-size: 25px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  padding: 0 5px;
+}
+
+.btn-search:hover {
+  transform: scale(1.2);
+}
+
+.main {
+  width: 50%;
+  color: #fffaa4;
+  background-color: rgba(255, 250, 164, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: self-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  letter-spacing: normal;
+}
+
+@keyframes flip-title {
+  from {
+    transform: rotateX(90deg);
+  }
+
+  to {
+    transform: rotateX(0deg);
+  }
 }
