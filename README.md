@@ -33,8 +33,6 @@ $ cd cep-search
 
 ---
 
-by Juscelino Mamede 🎸
 
-JOHN 14:6 ✟
 
 
